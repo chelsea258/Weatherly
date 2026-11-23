@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weatherly | Modern Weather App</title>
+
+    <meta name="description" content="Modern weather application built with HTML, CSS and JavaScript">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=2">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         Background Overlay
+    =========================================== -->
+
+    <div class="background-overlay"></div>
+
+    <!-- ==========================================
+         Main Application
+    =========================================== -->
+
+    <main class="app">
+
+        <!-- =========================
+             Header
+        ========================== -->
+
+        <header class="header">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cloud-sun"></i>
+
+                <h1>Weatherly</h1>
+
+            </div>
+
+            <button id="themeBtn" class="theme-btn" type="button" aria-label="Switch theme">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </header>
+
+        <!-- =========================
+             Search
+        ========================== -->
+
+        <section class="search-section">
+
+            <form id="searchForm">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="cityInput"
+                        aria-label="City name"
+                        placeholder="Search any city..."
+                        autocomplete="off">
+
+                </div>
+
+                <button type="submit" class="search-btn">
+
+                    Search
+
+                </button>
+
+            </form>
+
+            <button id="locationBtn" class="location-btn" type="button">
+
+                <i class="fa-solid fa-location-crosshairs"></i>
+
+                Use My Location
+
+            </button>
+
+        </section>
+
+        <!-- =========================
+             Loading & Errors
+        ========================== -->
+
+        <section class="status" aria-live="polite">
+
+            <div id="loading"></div>
+
+            <div id="error"></div>
+
+        </section>
+
+        <!-- =========================
+             Current Weather
+        ========================== -->
+
+        <section class="current-weather">
+
+            <div class="weather-icon">
+
+                <i id="weatherIcon" class="fa-solid fa-cloud"></i>
+
+            </div>
+
+            <h2 id="temperature">
+
+                --
+
+            </h2>
+
+            <h3 id="cityName">
+
+                Search a City
+
+            </h3>
+
+            <p id="description">
+
+                Weather Condition
+
+            </p>
+
+            <p id="dateTime">
+
+                Weather updates to the selected city's local time
+
+            </p>
+
+        </section>
+
+        <!-- =========================
+             Weather Details
+        ========================== -->
+
+        <section class="details-grid">
+
+            <article class="detail-card">
+
+                <i class="fa-solid fa-temperature-half"></i>
+
+                <h4>Feels Like</h4>
+
+                <p id="feelsLike">--</p>
+
+            </article>
+
+            <article class="detail-card">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <h4>Humidity</h4>
+
+                <p id="humidity">--%</p>
+
+            </article>
+
+            <article class="detail-card">
+
+                <i class="fa-solid fa-wind"></i>
+
+                <h4>Wind</h4>
+
+                <p id="wind">-- km/h</p>
+
+            </article>
+
+            <article class="detail-card">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+                <h4>Pressure</h4>
+
+                <p id="pressure">----</p>
+
+            </article>
+
+        </section>
+
+        <!-- =========================
+             Hourly Forecast
+        ========================== -->
+
+        <section class="hourly-weather">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Today's Forecast</h3>
+
+            </div>
+
+            <div
+                id="hourlyContainer"
+                class="hourly-container">
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             5-Day Forecast
+        ========================== -->
+
+        <section class="forecast">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h3>5-Day Forecast</h3>
+
+            </div>
+
+            <div
+                id="forecastContainer"
+                class="forecast-container">
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             Recent Searches
+        ========================== -->
+
+        <section class="history">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <h3>Recent Searches</h3>
+
+            </div>
+
+            <div
+                id="historyList"
+                class="history-list">
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             Footer
+        ========================== -->
+
+        <footer>
+
+            <p>
+
+                Chelsea | 2026 | <a href="https://github.com/Chelsea/weatherly" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            </p>
+
+        </footer>
+
+    </main>
+         <script src="script.js?v=2"></script>
+
+</body>
+
+</html>
