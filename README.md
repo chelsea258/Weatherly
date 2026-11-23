@@ -39,7 +39,7 @@ Weatherly is a clean and elegant weather application that provides real-time wea
 
 ## 🚀 Live Demo
 
-**Application:** *()*
+**Application:** *(https://weatherly-three-neon.vercel.app/)*
 
 
 
